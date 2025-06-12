@@ -13,24 +13,22 @@ Make sure the following are installed on your system:
 
 - **Java 17**  
   Tested with: `openjdk version "17.0.15"`  
-  → [Download Java](https://adoptium.net/en-GB/temurin/releases/)
 
 - **Apache Maven**  
   Tested with: `Apache Maven 3.9.10`  
-  → [install Maven]
+
 - windows :
-- ```bash
-  choco install maven
-  ```
-  if choco is not installed :
+```bash
+choco install maven
+```
+if choco is not installed :
 ```bash
 @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
 ```
 - MacOS : 
 ```bash
-  brew install maven
+brew install maven
 ```
-
 - Linux : 
 ```bash
 sudo apt install maven
