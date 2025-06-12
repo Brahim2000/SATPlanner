@@ -1,0 +1,123 @@
+==>
+1 make_sandwich_no_gluten sandw1 bread2 content1
+2 put_on_tray sandw1 tray1
+3 move_tray tray1 kitchen table3
+4 serve_sandwich_no_gluten sandw1 child1 tray1 table3
+5 move_tray tray1 table3 kitchen
+7 make_sandwich_no_gluten sandw26 bread19 content20
+8 put_on_tray sandw26 tray4
+9 move_tray tray4 kitchen table1
+10 serve_sandwich_no_gluten sandw26 child2 tray4 table1
+11 move_tray tray4 table1 kitchen
+13 make_sandwich sandw2 bread1 content2
+14 put_on_tray sandw2 tray1
+15 move_tray tray1 kitchen table1
+16 serve_sandwich sandw2 child3 tray1 table1
+17 move_tray tray1 table1 kitchen
+19 make_sandwich sandw13 bread18 content19
+20 put_on_tray sandw13 tray1
+21 move_tray tray1 kitchen table1
+22 serve_sandwich sandw13 child4 tray1 table1
+23 move_tray tray1 table1 kitchen
+25 make_sandwich sandw25 bread20 content15
+26 put_on_tray sandw25 tray4
+27 move_tray tray4 kitchen table2
+28 serve_sandwich sandw25 child5 tray4 table2
+29 move_tray tray4 table2 kitchen
+31 make_sandwich sandw3 bread3 content3
+32 put_on_tray sandw3 tray1
+33 move_tray tray1 kitchen table3
+34 serve_sandwich sandw3 child6 tray1 table3
+35 move_tray tray1 table3 kitchen
+37 make_sandwich sandw5 bread14 content14
+38 put_on_tray sandw5 tray1
+39 move_tray tray1 kitchen table1
+40 serve_sandwich sandw5 child7 tray1 table1
+41 move_tray tray1 table1 kitchen
+43 make_sandwich sandw4 bread5 content4
+44 put_on_tray sandw4 tray1
+45 move_tray tray1 kitchen table2
+46 serve_sandwich sandw4 child8 tray1 table2
+47 move_tray tray1 table2 kitchen
+49 make_sandwich sandw24 bread15 content10
+50 put_on_tray sandw24 tray4
+51 move_tray tray4 kitchen table2
+52 serve_sandwich sandw24 child9 tray4 table2
+53 move_tray tray4 table2 kitchen
+55 make_sandwich_no_gluten sandw6 bread4 content5
+56 put_on_tray sandw6 tray1
+57 move_tray tray1 kitchen table3
+58 serve_sandwich_no_gluten sandw6 child10 tray1 table3
+59 move_tray tray1 table3 kitchen
+61 make_sandwich_no_gluten sandw23 bread16 content8
+62 put_on_tray sandw23 tray4
+63 move_tray tray4 kitchen table3
+64 serve_sandwich_no_gluten sandw23 child11 tray4 table3
+65 move_tray tray4 table3 kitchen
+67 make_sandwich sandw22 bread17 content12
+68 put_on_tray sandw22 tray4
+69 move_tray tray4 kitchen table1
+70 serve_sandwich sandw22 child12 tray4 table1
+71 move_tray tray4 table1 kitchen
+73 make_sandwich sandw7 bread6 content9
+74 put_on_tray sandw7 tray1
+75 move_tray tray1 kitchen table2
+76 serve_sandwich sandw7 child13 tray1 table2
+77 move_tray tray1 table2 kitchen
+79 make_sandwich sandw21 bread12 content17
+80 put_on_tray sandw21 tray4
+81 move_tray tray4 kitchen table2
+82 serve_sandwich sandw21 child14 tray4 table2
+83 move_tray tray4 table2 kitchen
+85 make_sandwich_no_gluten sandw11 bread7 content6
+86 put_on_tray sandw11 tray4
+87 move_tray tray4 kitchen table3
+88 serve_sandwich_no_gluten sandw11 child15 tray4 table3
+89 move_tray tray4 table3 kitchen
+91 make_sandwich_no_gluten sandw20 bread13 content7
+92 put_on_tray sandw20 tray4
+93 move_tray tray4 kitchen table1
+94 serve_sandwich_no_gluten sandw20 child16 tray4 table1
+95 move_tray tray4 table1 kitchen
+97 make_sandwich sandw8 bread10 content13
+98 put_on_tray sandw8 tray1
+99 move_tray tray1 kitchen table3
+100 serve_sandwich sandw8 child17 tray1 table3
+101 move_tray tray1 table3 kitchen
+103 make_sandwich_no_gluten sandw9 bread8 content11
+104 put_on_tray sandw9 tray1
+105 move_tray tray1 kitchen table2
+106 serve_sandwich_no_gluten sandw9 child18 tray1 table2
+107 move_tray tray1 table2 kitchen
+109 make_sandwich sandw10 bread11 content16
+110 put_on_tray sandw10 tray1
+111 move_tray tray1 kitchen table3
+112 serve_sandwich sandw10 child19 tray1 table3
+113 move_tray tray1 table3 kitchen
+115 make_sandwich_no_gluten sandw12 bread9 content18
+116 put_on_tray sandw12 tray1
+117 move_tray tray1 kitchen table1
+118 serve_sandwich_no_gluten sandw12 child20 tray1 table1
+119 move_tray tray1 table1 kitchen
+root 0 6 12 18 24 30 36 42 48 54 60 66 72 78 84 90 96 102 108 114
+0 (serve child1) -> serve_0 1 2 3 4 5
+6 (serve child2) -> serve_0 7 8 9 10 11
+12 (serve child3) -> serve_1 13 14 15 16 17
+18 (serve child4) -> serve_1 19 20 21 22 23
+24 (serve child5) -> serve_1 25 26 27 28 29
+30 (serve child6) -> serve_1 31 32 33 34 35
+36 (serve child7) -> serve_1 37 38 39 40 41
+42 (serve child8) -> serve_1 43 44 45 46 47
+48 (serve child9) -> serve_1 49 50 51 52 53
+54 (serve child10) -> serve_0 55 56 57 58 59
+60 (serve child11) -> serve_0 61 62 63 64 65
+66 (serve child12) -> serve_1 67 68 69 70 71
+72 (serve child13) -> serve_1 73 74 75 76 77
+78 (serve child14) -> serve_1 79 80 81 82 83
+84 (serve child15) -> serve_0 85 86 87 88 89
+90 (serve child16) -> serve_0 91 92 93 94 95
+96 (serve child17) -> serve_1 97 98 99 100 101
+102 (serve child18) -> serve_0 103 104 105 106 107
+108 (serve child19) -> serve_1 109 110 111 112 113
+114 (serve child20) -> serve_0 115 116 117 118 119
+<==

@@ -1,0 +1,9 @@
+==>
+2 do_plane p2 verysmooth natural varnished smooth untreated natural
+4 do_plane p0 smooth red varnished smooth untreated natural
+6 do_spray_varnish p2 spray_varnisher0 red smooth untreated untreated varnished natural
+root 1 3 5
+1 (grindnplane p2 verysmooth natural varnished smooth natural untreated) -> method7 2
+3 (grindnplane p0 smooth red varnished smooth natural untreated) -> method7 4
+5 (do_colour p2 red spray_varnisher0 untreated) -> method1 6
+<==

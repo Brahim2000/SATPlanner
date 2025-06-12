@@ -1,0 +1,223 @@
+==>
+1 grasp left shot1
+3 fill-shot shot1 ingredient1 left right dispenser1
+4 pour-shot-to-clean-shaker shot1 ingredient1 shaker1 left l0 l1
+5 clean-shot shot1 ingredient1 left right
+7 fill-shot shot1 ingredient4 left right dispenser4
+8 pour-shot-to-used-shaker shot1 ingredient4 shaker1 left l1 l2
+9 clean-shot shot1 ingredient4 left right
+11 leave left shot1
+12 grasp right shaker1
+13 shake cocktail8 ingredient1 ingredient4 shaker1 right left
+14 pour-shaker-to-shot cocktail8 shot1 right shaker1 l2 l1
+15 empty-shaker right shaker1 cocktail8 l1 l0
+16 clean-shaker right left shaker1
+17 leave right shaker1
+19 grasp left shot2
+21 fill-shot shot2 ingredient1 left right dispenser1
+22 pour-shot-to-clean-shaker shot2 ingredient1 shaker1 left l0 l1
+23 clean-shot shot2 ingredient1 left right
+25 fill-shot shot2 ingredient3 left right dispenser3
+26 pour-shot-to-used-shaker shot2 ingredient3 shaker1 left l1 l2
+27 clean-shot shot2 ingredient3 left right
+29 leave left shot2
+30 grasp right shaker1
+31 shake cocktail9 ingredient1 ingredient3 shaker1 right left
+32 pour-shaker-to-shot cocktail9 shot2 right shaker1 l2 l1
+33 empty-shaker right shaker1 cocktail9 l1 l0
+34 clean-shaker right left shaker1
+35 leave right shaker1
+37 grasp left shot3
+39 fill-shot shot3 ingredient2 left right dispenser2
+40 pour-shot-to-clean-shaker shot3 ingredient2 shaker1 left l0 l1
+41 clean-shot shot3 ingredient2 left right
+43 fill-shot shot3 ingredient4 left right dispenser4
+44 pour-shot-to-used-shaker shot3 ingredient4 shaker1 left l1 l2
+45 clean-shot shot3 ingredient4 left right
+47 leave left shot3
+48 grasp right shaker1
+49 shake cocktail4 ingredient2 ingredient4 shaker1 right left
+50 pour-shaker-to-shot cocktail4 shot3 right shaker1 l2 l1
+51 empty-shaker right shaker1 cocktail4 l1 l0
+52 clean-shaker right left shaker1
+53 leave right shaker1
+55 grasp left shot4
+57 fill-shot shot4 ingredient4 left right dispenser4
+58 pour-shot-to-clean-shaker shot4 ingredient4 shaker1 left l0 l1
+59 clean-shot shot4 ingredient4 left right
+61 fill-shot shot4 ingredient1 left right dispenser1
+62 pour-shot-to-used-shaker shot4 ingredient1 shaker1 left l1 l2
+63 clean-shot shot4 ingredient1 left right
+65 leave left shot4
+66 grasp right shaker1
+67 shake cocktail3 ingredient4 ingredient1 shaker1 right left
+68 pour-shaker-to-shot cocktail3 shot4 right shaker1 l2 l1
+69 empty-shaker right shaker1 cocktail3 l1 l0
+70 clean-shaker right left shaker1
+71 leave right shaker1
+73 grasp left shot5
+75 fill-shot shot5 ingredient1 left right dispenser1
+76 pour-shot-to-clean-shaker shot5 ingredient1 shaker1 left l0 l1
+77 clean-shot shot5 ingredient1 left right
+79 fill-shot shot5 ingredient3 left right dispenser3
+80 pour-shot-to-used-shaker shot5 ingredient3 shaker1 left l1 l2
+81 clean-shot shot5 ingredient3 left right
+83 leave left shot5
+84 grasp right shaker1
+85 shake cocktail7 ingredient1 ingredient3 shaker1 right left
+86 pour-shaker-to-shot cocktail7 shot5 right shaker1 l2 l1
+87 empty-shaker right shaker1 cocktail7 l1 l0
+88 clean-shaker right left shaker1
+89 leave right shaker1
+91 grasp left shot6
+93 fill-shot shot6 ingredient3 left right dispenser3
+94 pour-shot-to-clean-shaker shot6 ingredient3 shaker1 left l0 l1
+95 clean-shot shot6 ingredient3 left right
+97 fill-shot shot6 ingredient1 left right dispenser1
+98 pour-shot-to-used-shaker shot6 ingredient1 shaker1 left l1 l2
+99 clean-shot shot6 ingredient1 left right
+101 leave left shot6
+102 grasp right shaker1
+103 shake cocktail5 ingredient3 ingredient1 shaker1 right left
+104 pour-shaker-to-shot cocktail5 shot6 right shaker1 l2 l1
+105 empty-shaker right shaker1 cocktail5 l1 l0
+106 clean-shaker right left shaker1
+107 leave right shaker1
+109 grasp left shot7
+111 fill-shot shot7 ingredient1 left right dispenser1
+112 pour-shot-to-clean-shaker shot7 ingredient1 shaker1 left l0 l1
+113 clean-shot shot7 ingredient1 left right
+115 fill-shot shot7 ingredient3 left right dispenser3
+116 pour-shot-to-used-shaker shot7 ingredient3 shaker1 left l1 l2
+117 clean-shot shot7 ingredient3 left right
+119 leave left shot7
+120 grasp right shaker1
+121 shake cocktail6 ingredient1 ingredient3 shaker1 right left
+122 pour-shaker-to-shot cocktail6 shot7 right shaker1 l2 l1
+123 empty-shaker right shaker1 cocktail6 l1 l0
+124 clean-shaker right left shaker1
+125 leave right shaker1
+127 grasp left shot8
+129 fill-shot shot8 ingredient1 left right dispenser1
+130 pour-shot-to-clean-shaker shot8 ingredient1 shaker1 left l0 l1
+131 clean-shot shot8 ingredient1 left right
+133 fill-shot shot8 ingredient3 left right dispenser3
+134 pour-shot-to-used-shaker shot8 ingredient3 shaker1 left l1 l2
+135 clean-shot shot8 ingredient3 left right
+137 leave left shot8
+138 grasp right shaker1
+139 shake cocktail10 ingredient1 ingredient3 shaker1 right left
+140 pour-shaker-to-shot cocktail10 shot8 right shaker1 l2 l1
+141 empty-shaker right shaker1 cocktail10 l1 l0
+142 clean-shaker right left shaker1
+143 leave right shaker1
+145 grasp left shot9
+147 fill-shot shot9 ingredient4 left right dispenser4
+148 pour-shot-to-clean-shaker shot9 ingredient4 shaker1 left l0 l1
+149 clean-shot shot9 ingredient4 left right
+151 fill-shot shot9 ingredient3 left right dispenser3
+152 pour-shot-to-used-shaker shot9 ingredient3 shaker1 left l1 l2
+153 clean-shot shot9 ingredient3 left right
+155 leave left shot9
+156 grasp right shaker1
+157 shake cocktail11 ingredient4 ingredient3 shaker1 right left
+158 pour-shaker-to-shot cocktail11 shot9 right shaker1 l2 l1
+159 empty-shaker right shaker1 cocktail11 l1 l0
+160 clean-shaker right left shaker1
+161 leave right shaker1
+163 grasp left shot10
+165 fill-shot shot10 ingredient3 left right dispenser3
+166 pour-shot-to-clean-shaker shot10 ingredient3 shaker1 left l0 l1
+167 clean-shot shot10 ingredient3 left right
+169 fill-shot shot10 ingredient1 left right dispenser1
+170 pour-shot-to-used-shaker shot10 ingredient1 shaker1 left l1 l2
+171 clean-shot shot10 ingredient1 left right
+173 leave left shot10
+174 grasp right shaker1
+175 shake cocktail2 ingredient3 ingredient1 shaker1 right left
+176 pour-shaker-to-shot cocktail2 shot10 right shaker1 l2 l1
+177 empty-shaker right shaker1 cocktail2 l1 l0
+178 clean-shaker right left shaker1
+179 leave right shaker1
+181 grasp left shot11
+183 fill-shot shot11 ingredient2 left right dispenser2
+184 pour-shot-to-clean-shaker shot11 ingredient2 shaker1 left l0 l1
+185 clean-shot shot11 ingredient2 left right
+187 fill-shot shot11 ingredient1 left right dispenser1
+188 pour-shot-to-used-shaker shot11 ingredient1 shaker1 left l1 l2
+189 clean-shot shot11 ingredient1 left right
+191 leave left shot11
+192 grasp right shaker1
+193 shake cocktail1 ingredient2 ingredient1 shaker1 right left
+194 pour-shaker-to-shot cocktail1 shot11 right shaker1 l2 l1
+195 empty-shaker right shaker1 cocktail1 l1 l0
+196 clean-shaker right left shaker1
+197 leave right shaker1
+199 grasp right shot12
+200 fill-shot shot12 ingredient3 right left dispenser3
+201 leave right shot12
+203 grasp left shot13
+205 fill-shot shot13 ingredient1 left right dispenser1
+206 pour-shot-to-clean-shaker shot13 ingredient1 shaker1 left l0 l1
+207 clean-shot shot13 ingredient1 left right
+209 fill-shot shot13 ingredient3 left right dispenser3
+210 pour-shot-to-used-shaker shot13 ingredient3 shaker1 left l1 l2
+211 clean-shot shot13 ingredient3 left right
+213 leave left shot13
+214 grasp right shaker1
+215 shake cocktail7 ingredient1 ingredient3 shaker1 right left
+216 pour-shaker-to-shot cocktail7 shot13 right shaker1 l2 l1
+217 empty-shaker right shaker1 cocktail7 l1 l0
+218 clean-shaker right left shaker1
+219 leave right shaker1
+root 0 18 36 54 72 90 108 126 144 162 180 198 202
+0 (serve_cocktail shot1 cocktail8) -> serve_cocktail_0 1 2 6 10
+2 (get_first_ingredient shot1 cocktail8 left) -> get_first_ingredient 3 4 5
+6 (get_second_ingredient shot1 cocktail8 left) -> get_second_ingredient 7 8 9
+10 (shake_cocktail shot1 cocktail8 left) -> shake_cocktail_0 11 12 13 14 15 16 17
+18 (serve_cocktail shot2 cocktail9) -> serve_cocktail_0 19 20 24 28
+20 (get_first_ingredient shot2 cocktail9 left) -> get_first_ingredient 21 22 23
+24 (get_second_ingredient shot2 cocktail9 left) -> get_second_ingredient 25 26 27
+28 (shake_cocktail shot2 cocktail9 left) -> shake_cocktail_0 29 30 31 32 33 34 35
+36 (serve_cocktail shot3 cocktail4) -> serve_cocktail_0 37 38 42 46
+38 (get_first_ingredient shot3 cocktail4 left) -> get_first_ingredient 39 40 41
+42 (get_second_ingredient shot3 cocktail4 left) -> get_second_ingredient 43 44 45
+46 (shake_cocktail shot3 cocktail4 left) -> shake_cocktail_0 47 48 49 50 51 52 53
+54 (serve_cocktail shot4 cocktail3) -> serve_cocktail_0 55 56 60 64
+56 (get_first_ingredient shot4 cocktail3 left) -> get_first_ingredient 57 58 59
+60 (get_second_ingredient shot4 cocktail3 left) -> get_second_ingredient 61 62 63
+64 (shake_cocktail shot4 cocktail3 left) -> shake_cocktail_0 65 66 67 68 69 70 71
+72 (serve_cocktail shot5 cocktail7) -> serve_cocktail_0 73 74 78 82
+74 (get_first_ingredient shot5 cocktail7 left) -> get_first_ingredient 75 76 77
+78 (get_second_ingredient shot5 cocktail7 left) -> get_second_ingredient 79 80 81
+82 (shake_cocktail shot5 cocktail7 left) -> shake_cocktail_0 83 84 85 86 87 88 89
+90 (serve_cocktail shot6 cocktail5) -> serve_cocktail_0 91 92 96 100
+92 (get_first_ingredient shot6 cocktail5 left) -> get_first_ingredient 93 94 95
+96 (get_second_ingredient shot6 cocktail5 left) -> get_second_ingredient 97 98 99
+100 (shake_cocktail shot6 cocktail5 left) -> shake_cocktail_0 101 102 103 104 105 106 107
+108 (serve_cocktail shot7 cocktail6) -> serve_cocktail_0 109 110 114 118
+110 (get_first_ingredient shot7 cocktail6 left) -> get_first_ingredient 111 112 113
+114 (get_second_ingredient shot7 cocktail6 left) -> get_second_ingredient 115 116 117
+118 (shake_cocktail shot7 cocktail6 left) -> shake_cocktail_0 119 120 121 122 123 124 125
+126 (serve_cocktail shot8 cocktail10) -> serve_cocktail_0 127 128 132 136
+128 (get_first_ingredient shot8 cocktail10 left) -> get_first_ingredient 129 130 131
+132 (get_second_ingredient shot8 cocktail10 left) -> get_second_ingredient 133 134 135
+136 (shake_cocktail shot8 cocktail10 left) -> shake_cocktail_0 137 138 139 140 141 142 143
+144 (serve_cocktail shot9 cocktail11) -> serve_cocktail_0 145 146 150 154
+146 (get_first_ingredient shot9 cocktail11 left) -> get_first_ingredient 147 148 149
+150 (get_second_ingredient shot9 cocktail11 left) -> get_second_ingredient 151 152 153
+154 (shake_cocktail shot9 cocktail11 left) -> shake_cocktail_0 155 156 157 158 159 160 161
+162 (serve_cocktail shot10 cocktail2) -> serve_cocktail_0 163 164 168 172
+164 (get_first_ingredient shot10 cocktail2 left) -> get_first_ingredient 165 166 167
+168 (get_second_ingredient shot10 cocktail2 left) -> get_second_ingredient 169 170 171
+172 (shake_cocktail shot10 cocktail2 left) -> shake_cocktail_0 173 174 175 176 177 178 179
+180 (serve_cocktail shot11 cocktail1) -> serve_cocktail_0 181 182 186 190
+182 (get_first_ingredient shot11 cocktail1 left) -> get_first_ingredient 183 184 185
+186 (get_second_ingredient shot11 cocktail1 left) -> get_second_ingredient 187 188 189
+190 (shake_cocktail shot11 cocktail1 left) -> shake_cocktail_0 191 192 193 194 195 196 197
+198 (serve_shot shot12 ingredient3) -> serve_shot_0 199 200 201
+202 (serve_cocktail shot13 cocktail7) -> serve_cocktail_0 203 204 208 212
+204 (get_first_ingredient shot13 cocktail7 left) -> get_first_ingredient 205 206 207
+208 (get_second_ingredient shot13 cocktail7 left) -> get_second_ingredient 209 210 211
+212 (shake_cocktail shot13 cocktail7 left) -> shake_cocktail_0 213 214 215 216 217 218 219
+<==

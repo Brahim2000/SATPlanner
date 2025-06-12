@@ -1,0 +1,21 @@
+==>
+4 do_saw_medium b0 p1 pine rough s3 s2 s1 medium natural untreated
+6 do_plane p1 rough natural untreated smooth untreated natural
+8 do_spray_varnish p1 spray_varnisher0 red smooth untreated untreated varnished natural
+11 do_grind p0 smooth red varnished untreated verysmooth natural
+13 do_glaze p0 glazer0 red untreated untreated glazed natural
+16 do_grind p2 verysmooth natural varnished untreated verysmooth natural
+18 do_spray_varnish p2 spray_varnisher0 red verysmooth untreated untreated varnished natural
+root 1 9 14
+1 (process p1 red rough smooth) -> method14 2 5 7
+2 (cut_and_saw b0 p1 pine rough) -> method10 3
+3 (do_saw b0 p1 pine rough) -> method8 4
+5 (grindnplane p1 rough natural untreated smooth natural untreated) -> method7 6
+7 (do_colour p1 red spray_varnisher0 untreated) -> method1 8
+9 (process p0 red smooth verysmooth) -> method12 10 12
+10 (grindnplane p0 smooth red varnished verysmooth natural untreated) -> method3 11
+12 (do_colour p0 red glazer0 untreated) -> method2 13
+14 (process p2 red verysmooth verysmooth) -> method12 15 17
+15 (grindnplane p2 verysmooth natural varnished verysmooth natural untreated) -> method3 16
+17 (do_colour p2 red spray_varnisher0 untreated) -> method1 18
+<==

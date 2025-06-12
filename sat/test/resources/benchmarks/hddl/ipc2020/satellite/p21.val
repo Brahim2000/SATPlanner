@@ -1,0 +1,31 @@
+==>
+2 switch_on instrument1 satellite1
+4 turn_to satellite1 star0 star2
+5 calibrate satellite1 instrument1 star0
+6 turn_to satellite1 phenomenon6 star0
+7 take_image satellite1 phenomenon6 instrument1 infrared1
+9 turn_to satellite1 star3 phenomenon6
+10 take_image satellite1 star3 instrument1 infrared1
+13 switch_on instrument0 satellite0
+15 turn_to satellite0 star0 star3
+16 calibrate satellite0 instrument0 star0
+17 turn_to satellite0 phenomenon5 star0
+18 take_image satellite0 phenomenon5 instrument0 spectrograph0
+20 turn_to satellite0 star4 phenomenon5
+21 take_image satellite0 star4 instrument0 spectrograph0
+23 turn_to satellite0 star7 star4
+24 take_image satellite0 star7 instrument0 spectrograph0
+26 turn_to satellite0 star2 star7
+27 take_image satellite0 star2 instrument0 infrared1
+root 0 8 11 19 22 25
+0 (do_observation phenomenon6 infrared1) -> method0 1 6 7
+1 (activate_instrument satellite1 instrument1) -> method5 2 3
+3 (auto_calibrate satellite1 instrument1) -> method6 4 5
+8 (do_observation star3 infrared1) -> method1 9 10
+11 (do_observation phenomenon5 spectrograph0) -> method0 12 17 18
+12 (activate_instrument satellite0 instrument0) -> method5 13 14
+14 (auto_calibrate satellite0 instrument0) -> method6 15 16
+19 (do_observation star4 spectrograph0) -> method1 20 21
+22 (do_observation star7 spectrograph0) -> method1 23 24
+25 (do_observation star2 infrared1) -> method1 26 27
+<==

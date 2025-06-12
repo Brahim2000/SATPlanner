@@ -1,0 +1,15 @@
+==>
+1 attachregularinformationtoemail email1 dateformeeting
+4 press_home_email
+6 select_email_emailaccount_noop account1
+7 press_email_newemail account1
+8 enter_emailaddress headofdepartment headofdepartmentemailaddress
+9 press_email_newemail_send headofdepartment email1
+11 extractsinformation_regular headofdepartment email1 dateformeeting
+root 0 2 10
+0 (attachinformationtoemail email1 dateformeeting) -> method65 1
+2 (send_email headofdepartment email1) -> method56 3 5 7 8 9
+3 (entermode_email) -> method83 4
+5 (select_email_emailaccount account1) -> method61 6
+10 (extractsinformation headofdepartment email1 dateformeeting) -> method72 11
+<==

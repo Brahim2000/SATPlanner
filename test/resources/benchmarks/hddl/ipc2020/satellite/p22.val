@@ -1,0 +1,37 @@
+==>
+2 switch_on instrument2 satellite2
+4 turn_to satellite2 star1 star7
+5 calibrate satellite2 instrument2 star1
+6 turn_to satellite2 planet9 star1
+7 take_image satellite2 planet9 instrument2 infrared3
+10 switch_on instrument1 satellite1
+12 turn_to satellite1 star1 phenomenon6
+13 calibrate satellite1 instrument1 star1
+14 turn_to satellite1 planet5 star1
+15 take_image satellite1 planet5 instrument1 image0
+17 turn_to satellite2 phenomenon6 planet9
+18 take_image satellite2 phenomenon6 instrument2 infrared3
+20 turn_to satellite1 phenomenon10 planet5
+21 take_image satellite1 phenomenon10 instrument1 spectrograph2
+23 turn_to satellite1 star7 phenomenon10
+24 take_image satellite1 star7 instrument1 image0
+26 turn_to satellite2 planet4 phenomenon6
+27 take_image satellite2 planet4 instrument2 thermograph1
+29 turn_to satellite1 star8 star7
+30 take_image satellite1 star8 instrument1 image0
+32 turn_to satellite1 star3 star8
+33 take_image satellite1 star3 instrument1 thermograph1
+root 0 8 16 19 22 25 28 31
+0 (do_observation planet9 infrared3) -> method0 1 6 7
+1 (activate_instrument satellite2 instrument2) -> method5 2 3
+3 (auto_calibrate satellite2 instrument2) -> method6 4 5
+8 (do_observation planet5 image0) -> method0 9 14 15
+9 (activate_instrument satellite1 instrument1) -> method5 10 11
+11 (auto_calibrate satellite1 instrument1) -> method6 12 13
+16 (do_observation phenomenon6 infrared3) -> method1 17 18
+19 (do_observation phenomenon10 spectrograph2) -> method1 20 21
+22 (do_observation star7 image0) -> method1 23 24
+25 (do_observation planet4 thermograph1) -> method1 26 27
+28 (do_observation star8 image0) -> method1 29 30
+31 (do_observation star3 thermograph1) -> method1 32 33
+<==

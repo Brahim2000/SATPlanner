@@ -1,0 +1,11 @@
+==>
+2 switch_on instrument0_2 satellite0
+4 turn_to satellite0 groundstation2 phenomenon6
+5 calibrate satellite0 instrument0_2 groundstation2
+6 turn_to satellite0 phenomenon4 groundstation2
+7 take_image satellite0 phenomenon4 instrument0_2 thermograph0
+root 0
+0 (do_observation phenomenon4 thermograph0) -> method0 1 6 7
+1 (activate_instrument satellite0 instrument0_2) -> method5 2 3
+3 (auto_calibrate satellite0 instrument0_2) -> method6 4 5
+<==

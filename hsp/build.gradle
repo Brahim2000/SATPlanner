@@ -1,0 +1,175 @@
+buildscript {
+    repositories {
+        gradlePluginPortal()
+    }
+    configurations.all {
+        resolutionStrategy.force 'net.java.dev.javacc:javacc:6.2'
+    }
+}
+
+plugins {
+    id "ca.coglinc.javacc" version "2.4.0"
+    id 'java'
+    id "kr.motd.sphinx" version "2.10.0"
+}
+
+apply plugin: 'base'
+apply plugin: 'java'
+apply plugin: 'checkstyle'
+
+group 'fr.uga'
+version '4.0.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j', version: '2.19.0'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.19.0'
+    implementation group: 'org.openjdk.jol', name: 'jol-core', version: '0.9'
+    testImplementation group: 'junit', name: 'junit', version: '4.13'
+    implementation 'info.picocli:picocli:4.6.2'
+    annotationProcessor 'info.picocli:picocli-codegen:4.6.2'
+}
+
+
+compileJavacc {
+    arguments = [debug_parser: 'false'] // debug true to print the lexical tree
+    inputDirectory = file('src/main/java/fr/uga/pddl4j/parser/lexer/')
+    outputDirectory = file('src/main/java/fr/uga/pddl4j/parser/lexer/')
+}
+
+jjdoc {
+    inputDirectory = file('src/main/java/fr/uga/pddl4j/parser/lexer/')
+    outputDirectory = file('build/docs/PDDL4J_BNF')
+    arguments = [TEXT: 'false', ONE_TABLE: 'true']
+
+}
+
+// The following annotation processors were detected on the compile classpath:
+// 'org.apache.logging.log4j.core.config.plugins.processor.PluginProcessor'.
+// Remove warning about log4j ProcessPlugin raised with --warning-mode=all
+compileJava {
+    options.compilerArgs += '-proc:none'
+    options.compilerArgs += ["-Aproject=${project.group}/${project.name}"]
+    options.compilerArgs += '-Xlint:unchecked'
+}
+
+compileTestJava {
+    options.compilerArgs += '-proc:none'
+    options.compilerArgs += '-Xlint:unchecked'
+}
+
+sphinx {
+    // Change the source directory.
+    sourceDirectory = "docs/"
+    // Change the output directory.
+    configDirectory= "docs/"
+    builder = "html"
+}
+
+checkstyle {
+    toolVersion = "8.9"
+}
+
+jar {
+    duplicatesStrategy = 'include'
+    exclude('fr/uga/pddl4j/examples/**')
+    manifest {
+        attributes (
+                'Implementation-Title': 'PDDL4J',
+                'Implementation-Version' : archiveVersion,
+                'Built-By': 'Damien Pellier',
+                'Premain-Class': 'org.openjdk.jol.vm.InstrumentationSupport',
+                'Launcher-Agent-Class': 'org.openjdk.jol.vm.InstrumentationSupport$Installer'
+        )
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+clean{
+    delete 'build', 'out', fileTree(dir: "src/main/java/fr/uga/pddl4j/parser/lexer", exclude:"Lexer.jj")
+}
+
+javadoc {
+    failOnError false
+    title = "PDDL4J API Documentation"
+    options.setOverview("src/overview.html")
+    options.setWindowTitle("PDDL4J API Documentation");
+    options.showFromProtected()
+    excludeLexer(javadoc)
+    include("**/*.java")
+}
+
+
+checkstyleMain.onlyIf() { !project.hasProperty('noCheckStyle') }
+
+checkstyleMain.doFirst() {
+    excludeLexer(checkstyleMain)
+}
+
+checkstyleMain.doLast() {
+    printCheckstyleVersion()
+}
+
+checkstyleTest.onlyIf() { !project.hasProperty('noCheckStyle') }
+
+checkstyleTest.doFirst(){
+    excludeLexer(checkstyleTest)
+}
+
+checkstyleTest.doLast(){
+    printCheckstyleVersion()
+}
+
+test.onlyIf() { !project.hasProperty('noTest') }
+
+test {
+    useJUnit()
+    // set heap size for the test JVM(s)
+    minHeapSize = "512m"
+    maxHeapSize = "4096m"
+    forkEvery = 1 // One new JVM for each test
+
+    testLogging {
+        showStandardStreams = true // Set to false to hid test output
+        exceptionFormat "full" // full to print stack
+        events "skipped", "failed", "passed"
+    }
+
+    // The set of Junit tests
+    scanForTestClasses = true
+    includes = [
+            '**/PDDLParserTest.class',
+            '**/HDDLParserTest.class',
+            //'**/ADLProblemInstantiationTest.class',
+            //'**/HTNProblemInstantiationTest.class',
+            //'**/TemporalProblemInstantiationTest.class',
+            '**/HSPTest.class',
+            '**/FFTest.class',
+            //'**/GSPTest.class',
+            '**/TFDTest.class',
+            '**/PFDTest.class'
+    ]
+
+}
+
+defaultTasks 'clean', 'build', 'test'
+
+// Exclude lexer source form task
+def excludeLexer(task) {
+    task.exclude("**/lexer/**")
+}
+
+// Display the current version use by checkstyle plugin
+def printCheckstyleVersion(){
+    println("Checkstyle version: "+checkstyle.toolVersion)
+}
+
+

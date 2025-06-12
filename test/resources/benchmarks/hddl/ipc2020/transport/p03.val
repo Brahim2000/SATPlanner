@@ -1,0 +1,40 @@
+==>
+3 drive truck_0 city_loc_0 city_loc_1
+4 drive truck_0 city_loc_1 city_loc_2
+6 pick_up truck_0 city_loc_2 package_1 capacity_1 capacity_2
+9 drive truck_0 city_loc_2 city_loc_1
+10 drive truck_0 city_loc_1 city_loc_1
+12 drop truck_0 city_loc_1 package_1 capacity_1 capacity_2
+15 drive truck_0 city_loc_1 city_loc_1
+17 pick_up truck_0 city_loc_1 package_0 capacity_1 capacity_2
+20 noop truck_0 city_loc_1
+21 drive truck_0 city_loc_1 city_loc_0
+23 drop truck_0 city_loc_0 package_0 capacity_1 capacity_2
+27 drive truck_0 city_loc_0 city_loc_1
+28 drive truck_0 city_loc_1 city_loc_2
+30 pick_up truck_0 city_loc_2 package_2 capacity_1 capacity_2
+33 drive truck_0 city_loc_2 city_loc_1
+34 drive truck_0 city_loc_1 city_loc_0
+36 drop truck_0 city_loc_0 package_2 capacity_1 capacity_2
+root 0 13 24
+0 (deliver package_1 city_loc_1) -> m_deliver_ordering_0 1 5 7 11
+1 (get_to truck_0 city_loc_2) -> m_drive_to_via_ordering_0 2 4
+2 (get_to truck_0 city_loc_1) -> m_drive_to_ordering_0 3
+5 (load truck_0 city_loc_2 package_1) -> m_load_ordering_0 6
+7 (get_to truck_0 city_loc_1) -> m_drive_to_via_ordering_0 8 10
+8 (get_to truck_0 city_loc_1) -> m_drive_to_ordering_0 9
+11 (unload truck_0 city_loc_1 package_1) -> m_unload_ordering_0 12
+13 (deliver package_0 city_loc_0) -> m_deliver_ordering_0 14 16 18 22
+14 (get_to truck_0 city_loc_1) -> m_drive_to_ordering_0 15
+16 (load truck_0 city_loc_1 package_0) -> m_load_ordering_0 17
+18 (get_to truck_0 city_loc_0) -> m_drive_to_via_ordering_0 19 21
+19 (get_to truck_0 city_loc_1) -> m_i_am_there_ordering_0 20
+22 (unload truck_0 city_loc_0 package_0) -> m_unload_ordering_0 23
+24 (deliver package_2 city_loc_0) -> m_deliver_ordering_0 25 29 31 35
+25 (get_to truck_0 city_loc_2) -> m_drive_to_via_ordering_0 26 28
+26 (get_to truck_0 city_loc_1) -> m_drive_to_ordering_0 27
+29 (load truck_0 city_loc_2 package_2) -> m_load_ordering_0 30
+31 (get_to truck_0 city_loc_0) -> m_drive_to_via_ordering_0 32 34
+32 (get_to truck_0 city_loc_1) -> m_drive_to_ordering_0 33
+35 (unload truck_0 city_loc_0 package_2) -> m_unload_ordering_0 36
+<==

@@ -1,0 +1,25 @@
+==>
+2 board p2 a1 c1
+5 fly a1 c1 c2 f4 f3
+6 debark p2 a1 c2
+9 board p3 a1 c2
+12 fly a1 c2 c1 f3 f2
+13 debark p3 a1 c1
+17 board p1 a1 c1
+20 fly a1 c1 c2 f2 f1
+21 debark p1 a1 c2
+root 0 1 7 8 14 16
+0 (transport-person p2 c1) -> m1-ordering-0
+1 (transport-person p2 c2) -> m2-ordering-0 2 3 6
+3 (upper-move-aircraft a1 c2) -> m4-do-ordering-0 4
+4 (move-aircraft a1 c1 c2) -> m5-case1-ordering-0 5
+7 (transport-person p4 c2) -> m1-ordering-0
+8 (transport-person p3 c1) -> m2-ordering-0 9 10 13
+10 (upper-move-aircraft a1 c1) -> m4-do-ordering-0 11
+11 (move-aircraft a1 c2 c1) -> m5-case1-ordering-0 12
+14 (transport-aircraft a2 c3) -> m6-ordering-0 15
+15 (upper-move-aircraft a2 c3) -> m4-abort-ordering-0
+16 (transport-person p1 c2) -> m2-ordering-0 17 18 21
+18 (upper-move-aircraft a1 c2) -> m4-do-ordering-0 19
+19 (move-aircraft a1 c1 c2) -> m5-case1-ordering-0 20
+<==

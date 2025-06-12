@@ -1,0 +1,76 @@
+==>
+4 drive truck_0 city_loc_1 city_loc_3
+5 drive truck_0 city_loc_3 city_loc_2
+6 drive truck_0 city_loc_2 city_loc_0
+8 pick_up truck_0 city_loc_0 package_0 capacity_2 capacity_3
+12 drive truck_0 city_loc_0 city_loc_2
+13 drive truck_0 city_loc_2 city_loc_3
+14 drive truck_0 city_loc_3 city_loc_1
+16 drop truck_0 city_loc_1 package_0 capacity_2 capacity_3
+19 drive truck_0 city_loc_1 city_loc_1
+21 pick_up truck_0 city_loc_1 package_4 capacity_2 capacity_3
+24 drive truck_0 city_loc_1 city_loc_3
+25 drive truck_0 city_loc_3 city_loc_2
+27 drop truck_0 city_loc_2 package_4 capacity_2 capacity_3
+30 noop truck_0 city_loc_2
+32 pick_up truck_0 city_loc_2 package_1 capacity_2 capacity_3
+36 drive truck_0 city_loc_2 city_loc_3
+37 drive truck_0 city_loc_3 city_loc_1
+38 drive truck_0 city_loc_1 city_loc_3
+40 drop truck_0 city_loc_3 package_1 capacity_2 capacity_3
+44 drive truck_0 city_loc_3 city_loc_2
+45 drive truck_0 city_loc_2 city_loc_0
+47 pick_up truck_0 city_loc_0 package_2 capacity_2 capacity_3
+51 drive truck_0 city_loc_0 city_loc_2
+52 drive truck_0 city_loc_2 city_loc_3
+53 drive truck_0 city_loc_3 city_loc_1
+55 drop truck_0 city_loc_1 package_2 capacity_2 capacity_3
+60 drive truck_0 city_loc_1 city_loc_3
+61 drive truck_0 city_loc_3 city_loc_2
+62 drive truck_0 city_loc_2 city_loc_0
+64 pick_up truck_0 city_loc_0 package_3 capacity_2 capacity_3
+68 drive truck_0 city_loc_0 city_loc_2
+69 drive truck_0 city_loc_2 city_loc_3
+70 drive truck_0 city_loc_3 city_loc_1
+72 drop truck_0 city_loc_1 package_3 capacity_2 capacity_3
+root 0 17 28 41 56
+0 (deliver package_0 city_loc_1) -> m_deliver_ordering_0 1 7 9 15
+1 (get_to truck_0 city_loc_0) -> m_drive_to_via_ordering_0 2 6
+2 (get_to truck_0 city_loc_2) -> m_drive_to_via_ordering_0 3 5
+3 (get_to truck_0 city_loc_3) -> m_drive_to_ordering_0 4
+7 (load truck_0 city_loc_0 package_0) -> m_load_ordering_0 8
+9 (get_to truck_0 city_loc_1) -> m_drive_to_via_ordering_0 10 14
+10 (get_to truck_0 city_loc_3) -> m_drive_to_via_ordering_0 11 13
+11 (get_to truck_0 city_loc_2) -> m_drive_to_ordering_0 12
+15 (unload truck_0 city_loc_1 package_0) -> m_unload_ordering_0 16
+17 (deliver package_4 city_loc_2) -> m_deliver_ordering_0 18 20 22 26
+18 (get_to truck_0 city_loc_1) -> m_drive_to_ordering_0 19
+20 (load truck_0 city_loc_1 package_4) -> m_load_ordering_0 21
+22 (get_to truck_0 city_loc_2) -> m_drive_to_via_ordering_0 23 25
+23 (get_to truck_0 city_loc_3) -> m_drive_to_ordering_0 24
+26 (unload truck_0 city_loc_2 package_4) -> m_unload_ordering_0 27
+28 (deliver package_1 city_loc_3) -> m_deliver_ordering_0 29 31 33 39
+29 (get_to truck_0 city_loc_2) -> m_i_am_there_ordering_0 30
+31 (load truck_0 city_loc_2 package_1) -> m_load_ordering_0 32
+33 (get_to truck_0 city_loc_3) -> m_drive_to_via_ordering_0 34 38
+34 (get_to truck_0 city_loc_1) -> m_drive_to_via_ordering_0 35 37
+35 (get_to truck_0 city_loc_3) -> m_drive_to_ordering_0 36
+39 (unload truck_0 city_loc_3 package_1) -> m_unload_ordering_0 40
+41 (deliver package_2 city_loc_1) -> m_deliver_ordering_0 42 46 48 54
+42 (get_to truck_0 city_loc_0) -> m_drive_to_via_ordering_0 43 45
+43 (get_to truck_0 city_loc_2) -> m_drive_to_ordering_0 44
+46 (load truck_0 city_loc_0 package_2) -> m_load_ordering_0 47
+48 (get_to truck_0 city_loc_1) -> m_drive_to_via_ordering_0 49 53
+49 (get_to truck_0 city_loc_3) -> m_drive_to_via_ordering_0 50 52
+50 (get_to truck_0 city_loc_2) -> m_drive_to_ordering_0 51
+54 (unload truck_0 city_loc_1 package_2) -> m_unload_ordering_0 55
+56 (deliver package_3 city_loc_1) -> m_deliver_ordering_0 57 63 65 71
+57 (get_to truck_0 city_loc_0) -> m_drive_to_via_ordering_0 58 62
+58 (get_to truck_0 city_loc_2) -> m_drive_to_via_ordering_0 59 61
+59 (get_to truck_0 city_loc_3) -> m_drive_to_ordering_0 60
+63 (load truck_0 city_loc_0 package_3) -> m_load_ordering_0 64
+65 (get_to truck_0 city_loc_1) -> m_drive_to_via_ordering_0 66 70
+66 (get_to truck_0 city_loc_3) -> m_drive_to_via_ordering_0 67 69
+67 (get_to truck_0 city_loc_2) -> m_drive_to_ordering_0 68
+71 (unload truck_0 city_loc_1 package_3) -> m_unload_ordering_0 72
+<==
