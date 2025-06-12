@@ -46,8 +46,6 @@ sudo apt install maven
 
 ## 🚀 How to Run
 
-### 1. Compile the SAT-based Planner
-
 ### Run the Benchmark Script
 
 ```bash
@@ -86,10 +84,5 @@ mvn exec:java -Dexec.args="path_to_domain path_to_problem"
 mvn exec:java -Dexec.args="test/resources/benchmarks/pddl/ipc2000/blocks/strips-typed/domain.pddl test/resources/benchmarks/pddl/ipc2000/blocks/strips-typed/p001.pddl"
 ```
 
-
-## 📌 Notes
-
-- Plans are not printed by default during benchmarking — only runtime and makespan are recorded.
-- Make sure file paths to the domain and problem files are valid when using the `exec:java` command.
 
 
