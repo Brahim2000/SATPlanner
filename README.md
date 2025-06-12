@@ -1,6 +1,6 @@
 # 🧠 PDDL Planner Benchmark Comparison
 
-This project compares two **PDDL planners** — [**HSP**](https://www.cs.toronto.edu/~bonner/courses/2018s/csc2516/hsp-planner.pdf) and a **SAT-based planner** — across several benchmark domains.  
+This project compares two **PDDL planners** — **HSP** and a **SAT-based planner** — across several benchmark domains.  
 It runs both planners on selected problems, measures **runtime** and **makespan**, and generates **comparison plots**.
 
 ---
