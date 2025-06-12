@@ -18,23 +18,25 @@ Make sure the following are installed on your system:
 - **Apache Maven**  
   Tested with: `Apache Maven 3.9.10`  
   → [install Maven]
-- windows : ```bash
+- windows :
+- ```bash
   choco install maven
   ```
-  if choco is not installed : ```bash
-  Set-ExecutionPolicy Bypass -Scope Process -Force; `
+  if choco is not installed :
+```bash
+Set-ExecutionPolicy Bypass -Scope Process -Force; `
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; `
 iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-  ```
+```
 - MacOS : 
 ```bash
   brew install maven
-  ```
+```
 
 - Linux : 
 ```bash
 sudo apt install maven
-  ```
+```
 
 - **Python 3.10+**  
 
