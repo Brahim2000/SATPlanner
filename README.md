@@ -48,13 +48,7 @@ sudo apt install maven
 
 ### 1. Compile the SAT-based Planner
 
-```bash
-cd sat
-mvn compile
-cd ..
-```
-
-### 2. Run the Benchmark Script
+### Run the Benchmark Script
 
 ```bash
 python script.py
