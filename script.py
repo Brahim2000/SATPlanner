@@ -23,6 +23,60 @@ HSP_PLANNER_CMD = ["java", "-cp", HSP_PLANNER_JAR, "fr.uga.pddl4j.planners.state
 
 ALL_RESULTS = {}
 
+def compile_projects():
+    """Compile both projects once at the beginning"""
+    print("Compiling SAT planner (Maven)...")
+    try:
+        mvn_executable = "mvn.cmd" if os.name == "nt" else "mvn"
+        subprocess.run(
+            [mvn_executable, "compile"],
+            cwd=SAT_PLANNER_DIR,
+            check=True,
+            shell=True  # Added shell=True for Windows
+        )
+        print("SAT planner compiled successfully")
+    except subprocess.CalledProcessError as e:
+        print(f"Error compiling SAT planner: {e}")
+        return False
+    
+    print("Compiling HSP planner (Gradle)...")
+    try:
+        gradle_executable = "gradlew.bat" if os.name == "nt" else "./gradlew"
+        gradle_path = os.path.join(HSP_PLANNER_DIR, gradle_executable)
+        
+        # Convert to absolute path and normalize
+        gradle_path = os.path.abspath(gradle_path)
+        
+        # Verify gradlew.bat exists
+        if not os.path.exists(gradle_path):
+            print(f"Error: Gradle wrapper not found at {gradle_path}")
+            return False
+            
+        print(f"Using Gradle wrapper at: {gradle_path}")
+        
+        # For Windows, we need to run the batch file differently
+        if os.name == 'nt':
+            cmd = f'"{gradle_path}" build'
+        else:
+            cmd = [gradle_path, "build"]
+        
+        subprocess.run(
+            cmd,
+            cwd=HSP_PLANNER_DIR,
+            check=True,
+            shell=True  # Important for Windows batch files
+        )
+        print("HSP planner compiled successfully")
+        return True
+    except subprocess.CalledProcessError as e:
+        print(f"Error compiling HSP planner: {e}")
+        print(f"Command that failed: {e.cmd}")
+        print(f"Working directory: {os.path.abspath(HSP_PLANNER_DIR)}")
+        return False
+    except Exception as e:
+        print(f"Unexpected error compiling HSP planner: {e}")
+        return False
+        
 def run_planner(planner_type, domain_file, problem_file):
     start = time.time()
     try:
@@ -150,6 +204,12 @@ def plot_results():
         plt.close()
 
 if __name__ == "__main__":
+    # Compile both projects first
+    if not compile_projects():
+        print("Compilation failed, exiting...")
+        exit(1)
+    
+    # Run benchmarks
     for name, path in BENCHMARKS.items():
         compare_domain(name, os.path.normpath(path))
     plot_results()
